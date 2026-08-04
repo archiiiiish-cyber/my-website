@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediAdmission India – Your Gateway to MBBS Admissions in India</title>
+  <meta name="description" content="MediAdmission India helps Indian & NRI students secure MBBS admissions across India through transparent counseling for Government, Management & NRI Quota." />
+  <meta name="keywords" content="MBBS admission India, NEET counseling, management quota, NRI quota, government quota, medical colleges India" />
+  <meta name="author" content="MediAdmission India" />
+  <meta property="og:title" content="MediAdmission India" />
+  <meta property="og:description" content="Your Gateway to MBBS Admissions in India – Government, Management & NRI Quota." />
+  <meta property="og:type" content="website" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            medical: {
+              50: '#effaf5',
+              100: '#d8f2e5',
+              200: '#b4e5ce',
+              300: '#82d1b0',
+              400: '#4cb88d',
+              500: '#2a9d73',
+              600: '#1d7f5d',
+              700: '#18664c',
+              800: '#15513e',
+              900: '#124335',
+            },
+            navy: {
+              50: '#eef4ff',
+              100: '#d9e6ff',
+              200: '#bcd3ff',
+              300: '#8eb6ff',
+              400: '#598dff',
+              500: '#3367ff',
+              600: '#1d47f5',
+              700: '#1635e2',
+              800: '#182db7',
+              900: '#1a2c93',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            'fade-in-up': 'fadeInUp 0.8s ease-out both',
+            pulseSoft: 'pulseSoft 2.5s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-15px)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.6' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); }
+    .dark .glass { background: rgba(15,23,42,0.7); }
+    .gradient-text {
+      background: linear-gradient(135deg, #1d47f5 0%, #2a9d73 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(26,44,147,0.92) 0%, rgba(29,71,245,0.85) 45%, rgba(42,157,115,0.88) 100%);
+    }
+    .card-hover { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    .timeline-line::before {
+      content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 4px;
+      background: linear-gradient(180deg, #1d47f5, #2a9d73); transform: translateX(-50%);
+    }
+    @media (max-width: 768px) { .timeline-line::before { left: 20px; } }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .tab-btn.active { background: linear-gradient(135deg, #1d47f5, #2a9d73); color: white; box-shadow: 0 8px 20px rgba(29,71,245,0.3); }
+    .faq-item.active .faq-answer { max-height: 500px; opacity: 1; padding-bottom: 1rem; }
+    .faq-answer { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); color: #1d47f5; }
+    .dark .faq-item.active .faq-icon { color: #4cb88d; }
+    .toast { animation: fadeInUp 0.4s ease both; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: 0; }
+    .dark .blob { opacity: 0.25; }
+    input, select, textarea { transition: border-color 0.3s, box-shadow 0.3s; }
+    input:focus, select:focus, textarea:focus { border-color: #2a9d73 !important; box-shadow: 0 0 0 3px rgba(42,157,115,0.2); }
+    .file-drop { border: 2px dashed #cbd5e1; transition: all 0.3s; }
+    .file-drop:hover, .file-drop.dragover { border-color: #2a9d73; background: #effaf5; }
+    .dark .file-drop { border-color: #334155; }
+    .dark .file-drop:hover, .dark .file-drop.dragover { border-color: #4cb88d; background: #124335; }
+    .inputs-bg { background-color: #fff; }
+    .dark .inputs-bg { background-color: #0f172a; color: #e2e8f0; }
+    .dark select { color: #e2e8f0; }
+    .dark select option { background-color: #0f172a; color: #e2e8f0; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased overflow-x-hidden">
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <nav class="glass border-b border-slate-200/60 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="#home" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gradient-to-br from-navy-500 to-medical-500 rounded-xl flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-staff-snake text-white text-lg"></i>
+            </div>
+            <div>
+              <p class="font-extrabold text-lg leading-tight text-navy-800 dark:text-white">MediAdmission</p>
+              <p class="text-[10px] tracking-widest text-medical-600 dark:text-medical-400 font-semibold uppercase">India</p>
+            </div>
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="hidden lg:flex items-center gap-1">
+            <a href="#home" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">Home</a>
+            <a href="#about" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">About</a>
+            <a href="#categories" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">Categories</a>
+            <a href="#colleges" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">Colleges</a>
+            <a href="#eligibility" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">Eligibility</a>
+            <a href="#process" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">Process</a>
+            <a href="#features" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">Features</a>
+            <a href="#faq" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">FAQ</a>
+            <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium rounded-lg hover:bg-medical-50 hover:text-medical-700 dark:hover:bg-slate-800 dark:hover:text-medical-400">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <!-- Dark mode toggle -->
+            <button id="themeToggle" class="w-10 h-10 rounded-full flex items-center justify-center text-slate-600 dark:text-yellow-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Toggle Dark/Light Mode">
+              <i class="fa-solid fa-moon text-lg"></i>
+            </button>
+            <!-- Apply Now -->
+            <a href="#apply" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-navy-500 to-medical-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform">
+              <i class="fa-solid fa-paper-plane text-xs"></i> Apply Now
+            </a>
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
+              <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden glass border-b border-slate-200/60 dark:border-slate-800">
+      <div class="px-4 py-3 space-y-1">
+        <a href="#home" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">Home</a>
+        <a href="#about" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">About</a>
+        <a href="#categories" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">Categories</a>
+        <a href="#colleges" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">Colleges</a>
+        <a href="#eligibility" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">Eligibility</a>
+        <a href="#process" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">Process</a>
+        <a href="#features" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">Features</a>
+        <a href="#faq" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">FAQ</a>
+        <a href="#contact" class="mobile-link block px-3 py-2.5 rounded-lg font-medium hover:bg-medical-50 dark:hover:bg-slate-800">Contact</a>
+        <a href="#apply" class="mobile-link block px-3 py-2.5 rounded-lg font-semibold bg-gradient-to-r from-navy-500 to-medical-500 text-white text-center">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="home" class="relative min-h-screen flex items-center pt-20 hero-gradient text-white overflow-hidden">
+    <div class="blob w-96 h-96 bg-white top-10 -left-20"></div>
+    <div class="blob w-80 h-80 bg-medical-400 bottom-20 right-20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left content -->
+        <div class="animate-fade-in-up">
+          <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm font-medium border border-white/20 mb-6">
+            <i class="fa-solid fa-shield-halved text-medical-300"></i>
+            Trusted by 10,000+ Students & Parents
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+            Your Gateway to <span class="text-medical-300">MBBS Admissions</span> in India
+          </h1>
+          <p class="text-lg text-white/90 mb-8 max-w-xl">
+            Government, Management & NRI Quota. Transparent counseling, expert guidance, and verified colleges — all in one trusted platform.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-10">
+            <a href="#apply" class="inline-flex items-center gap-2 bg-white text-navy-700 font-bold px-7 py-3.5 rounded-xl shadow-xl hover:scale-105 transition-transform">
+              <i class="fa-solid fa-paper-plane"></i> Apply Now
+            </a>
+            <a href="#counseling" class="inline-flex items-center gap-2 bg-medical-500 font-bold px-7 py-3.5 rounded-xl shadow-xl hover:scale-105 hover:bg-medical-600 transition-all">
+              <i class="fa-solid fa-headset"></i> Book Free Counseling
+            </a>
+            <a href="#colleges" class="inline-flex items-center gap-2 bg-white/10 border border-white/30 backdrop-blur font-bold px-7 py-3.5 rounded-xl hover:bg-white/20 transition-all">
+              <i class="fa-solid fa-building-columns"></i> Explore Colleges
+            </a>
+          </div>
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-4 max-w-lg">
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/20">
+              <p class="text-3xl font-extrabold" data-count="250">0</p>
+              <p class="text-xs text-white/80 mt-1">+ Medical Colleges</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/20">
+              <p class="text-3xl font-extrabold" data-count="10000">0</p>
+              <p class="text-xs text-white/80 mt-1">+ Students Placed</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/20">
+              <p class="text-3xl font-extrabold" data-count="98">0</p>
+              <p class="text-xs text-white/80 mt-1">% Success Rate</p>
+            </div>
+          </div>
+        </div>
+        <!-- Right image collage -->
+        <div class="hidden lg:block relative">
+          <div class="grid grid-cols-2 gap-4">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Doctor" class="rounded-2xl h-64 w-full object-cover shadow-2xl border-4 border-white/20 animate-float" />
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Medical student" class="rounded-2xl h-64 w-full object-cover shadow-2xl border-4 border-white/20 mt-8" />
+            <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80" alt="Hospital" class="rounded-2xl h-64 w-full object-cover shadow-2xl border-4 border-white/20" />
+            <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?w=600&q=80" alt="Campus" class="rounded-2xl h-64 w-full object-cover shadow-2xl border-4 border-white/20 mt-8 animate-float" />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white text-navy-800 rounded-2xl shadow-2xl px-5 py-4 flex items-center gap-3">
+            <div class="w-12 h-12 bg-medical-100 rounded-full flex items-center justify-center text-medical-600">
+              <i class="fa-solid fa-award text-xl"></i>
+            </div>
+            <div>
+              <p class="font-bold">NMC Approved</p>
+              <p class="text-xs text-slate-500">Verified Colleges</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT US ============ -->
+  <section id="about" class="py-20 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="inline-block bg-medical-100 text-medical-700 dark:bg-medical-900/50 dark:text-medical-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">About Us</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Your Trusted MBBS Admission Partner</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">MediAdmission India is an admission guidance portal helping students secure MBBS admissions across India through transparent counseling and expert guidance.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover reveal">
+          <div class="w-14 h-14 bg-medical-100 dark:bg-medical-900/50 rounded-2xl flex items-center justify-center text-medical-600 dark:text-medical-300 mb-5">
+            <i class="fa-solid fa-bullseye text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 dark:text-white mb-3">Our Mission</h3>
+          <p class="text-slate-600 dark:text-slate-400">To make quality medical education accessible to every deserving student through honest guidance, verified information, and end-to-end admission support.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover reveal">
+          <div class="w-14 h-14 bg-navy-100 dark:bg-navy-900/50 rounded-2xl flex items-center justify-center text-navy-600 dark:text-navy-300 mb-5">
+            <i class="fa-solid fa-eye text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 dark:text-white mb-3">Our Vision</h3>
+          <p class="text-slate-600 dark:text-slate-400">To become India's most trusted and transparent MBBS admission platform, empowering students and parents with knowledge and confidence.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover reveal">
+          <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/50 rounded-2xl flex items-center justify-center text-amber-600 dark:text-amber-300 mb-5">
+            <i class="fa-solid fa-handshake text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 dark:text-white mb-3">Our Promise</h3>
+          <p class="text-slate-600 dark:text-slate-400">Transparent pricing, verified colleges, dedicated counselors, and complete support from application to seat confirmation — no hidden costs, ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section id="why" class="py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <div class="blob w-72 h-72 bg-medical-200 top-20 right-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-14 reveal">
+        <span class="inline-block bg-navy-100 text-navy-700 dark:bg-navy-900/50 dark:text-navy-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Why Choose Us</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Why Students Trust MediAdmission</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We combine technology, expertise, and transparency to deliver the best admission experience.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-user-check text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Expert Counselors</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Dedicated counselors with 15+ years of experience guide you at every step.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-shield-halved text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">100% Transparency</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Clear fee structures and verified NMC-approved colleges. No hidden charges.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-robot text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">AI Admission Assistant</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Our AI recommends the best colleges based on your NEET score and preferences.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-clock-rotate-left text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">End-to-End Support</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">From application to seat confirmation, we handle everything for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ADMISSION CATEGORIES ============ -->
+  <section id="categories" class="py-20 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 reveal">
+        <span class="inline-block bg-medical-100 text-medical-700 dark:bg-medical-900/50 dark:text-medical-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Admission Categories</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Choose Your Admission Category</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Explore the three admission pathways available for MBBS in India.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex justify-center gap-3 mb-10 flex-wrap">
+        <button class="tab-btn active font-semibold px-6 py-3 rounded-xl text-sm transition-all" data-tab="govt">
+          <i class="fa-solid fa-landmark mr-2"></i>Government Quota
+        </button>
+        <button class="tab-btn font-semibold px-6 py-3 rounded-xl text-sm bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 transition-all" data-tab="mgmt">
+          <i class="fa-solid fa-building-columns mr-2"></i>Management Quota
+        </button>
+        <button class="tab-btn font-semibold px-6 py-3 rounded-xl text-sm bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 transition-all" data-tab="nri">
+          <i class="fa-solid fa-plane mr-2"></i>NRI Quota
+        </button>
+      </div>
+
+      <!-- Government Quota -->
+      <div class="tab-content" id="tab-govt">
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg reveal">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-navy-100 dark:bg-navy-900/50 rounded-xl flex items-center justify-center text-navy-600 dark:text-navy-300">
+                <i class="fa-solid fa-landmark text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 dark:text-white">Government Quota</h3>
+            </div>
+            <div class="space-y-5">
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-check mr-2"></i>Eligibility</h5>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Indian citizens with valid NEET score, 50% in Physics, Chemistry & Biology (40% for reserved categories), and 17+ years of age.</p>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-clipboard-list mr-2"></i>Admission Process</h5>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Through centralized state counseling (NEET UG) based on merit rank. Allotment by choice filling and rounds of counseling.</p>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-folder-open mr-2"></i>Required Documents</h5>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc pl-5 space-y-1">
+                  <li>NEET Scorecard & Roll Number</li>
+                  <li>10th & 12th Marksheets</li>
+                  <li>Birth Certificate</li>
+                  <li>Domicile / Category Certificate</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-gift mr-2"></i>Benefits</h5>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc pl-5 space-y-1">
+                  <li>Affordable government fee structure</li>
+                  <li>Recognized & reputed institutions</li>
+                  <li>Financial aid and scholarships available</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-navy-600 to-navy-800 rounded-2xl p-8 text-white shadow-xl reveal flex flex-col justify-center">
+            <i class="fa-solid fa-landmark text-5xl mb-5 opacity-80"></i>
+            <h4 class="text-2xl font-bold mb-3">Government Quota Highlights</h4>
+            <p class="text-white/80 mb-6">The most affordable and prestigious pathway to MBBS, allocated strictly on NEET merit through transparent state counseling.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/10 rounded-xl p-4">
+                <p class="text-3xl font-extrabold">₹40K</p>
+                <p class="text-xs text-white/70">Avg. Annual Fee</p>
+              </div>
+              <div class="bg-white/10 rounded-xl p-4">
+                <p class="text-3xl font-extrabold">15%</p>
+                <p class="text-xs text-white/70">All India Quota</p>
+              </div>
+            </div>
+            <a href="#apply" class="mt-8 inline-flex items-center justify-center gap-2 bg-white text-navy-700 font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform">
+              Apply for Govt Quota <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Management Quota -->
+      <div class="tab-content hidden" id="tab-mgmt">
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg reveal">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300">
+                <i class="fa-solid fa-building-columns text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 dark:text-white">Management Quota</h3>
+            </div>
+            <div class="space-y-5">
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-check mr-2"></i>Eligibility</h5>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Qualified NEET score (minimum qualifying percentile), 50% in PCB for general category, 17+ years age. Available in private colleges.</p>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-clipboard-list mr-2"></i>Admission Process</h5>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Direct admission through college counseling based on NEET score and seat availability. Our counselors help secure the best seat.</p>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-folder-open mr-2"></i>Required Documents</h5>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc pl-5 space-y-1">
+                  <li>NEET Scorecard</li>
+                  <li>10th & 12th Marksheets</li>
+                  <li>Passport-size photographs</li>
+                  <li>Identity & Address Proof</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-gift mr-2"></i>Benefits</h5>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc pl-5 space-y-1">
+                  <li>Higher chances of admission</li>
+                  <li>Flexible cut-off requirements</li>
+                  <li>Wide range of private colleges</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-medical-600 to-medical-800 rounded-2xl p-8 text-white shadow-xl reveal flex flex-col justify-center">
+            <i class="fa-solid fa-building-columns text-5xl mb-5 opacity-80"></i>
+            <h4 class="text-2xl font-bold mb-3">Management Quota Highlights</h4>
+            <p class="text-white/80 mb-6">Secure admission in leading private medical colleges with greater flexibility and personalized seat allocation.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/10 rounded-xl p-4">
+                <p class="text-3xl font-extrabold">₹15L</p>
+                <p class="text-xs text-white/70">Avg. Annual Fee</p>
+              </div>
+              <div class="bg-white/10 rounded-xl p-4">
+                <p class="text-3xl font-extrabold">25%</p>
+                <p class="text-xs text-white/70">Seats in Private</p>
+              </div>
+            </div>
+            <a href="#apply" class="mt-8 inline-flex items-center justify-center gap-2 bg-white text-medical-700 font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform">
+              Apply for Mgmt Quota <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NRI Quota -->
+      <div class="tab-content hidden" id="tab-nri">
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg reveal">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/50 rounded-xl flex items-center justify-center text-amber-600 dark:text-amber-300">
+                <i class="fa-solid fa-plane text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 dark:text-white">NRI Quota</h3>
+            </div>
+            <div class="space-y-5">
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-check mr-2"></i>Eligibility</h5>
+                <p class="text-sm text-slate-600 dark:text-slate-400">NRI students or children of NRIs with valid NEET score. Proof of NRI status, passport, and visa required.</p>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-clipboard-list mr-2"></i>Admission Process</h5>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Reserved seats for NRI candidates. Direct admission through college counseling with sponsor documents and fee payment.</p>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-folder-open mr-2"></i>Required Documents</h5>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc pl-5 space-y-1">
+                  <li>NEET Scorecard</li>
+                  <li>Passport & Visa</li>
+                  <li>NRI/OCI/PIO Certificate</li>
+                  <li>Sponsor Documents</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-bold text-medical-600 mb-2"><i class="fa-solid fa-gift mr-2"></i>Benefits</h5>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc pl-5 space-y-1">
+                  <li>Separate reserved seats</li>
+                  <li>Lower competition for seats</li>
+                  <li>Priority admission consideration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-8 text-white shadow-xl reveal flex flex-col justify-center">
+            <i class="fa-solid fa-earth-asia text-5xl mb-5 opacity-80"></i>
+            <h4 class="text-2xl font-bold mb-3">NRI Quota Highlights</h4>
+            <p class="text-white/80 mb-6">Dedicated seats for NRI students in top medical colleges across India with streamlined admission support.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/10 rounded-xl p-4">
+                <p class="text-3xl font-extrabold">₹25L</p>
+                <p class="text-xs text-white/70">Avg. Annual Fee</p>
+              </div>
+              <div class="bg-white/10 rounded-xl p-4">
+                <p class="text-3xl font-extrabold">15%</p>
+                <p class="text-xs text-white/70">Reserved Seats</p>
+              </div>
+            </div>
+            <a href="#apply" class="mt-8 inline-flex items-center justify-center gap-2 bg-white text-amber-700 font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform">
+              Apply for NRI Quota <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED MEDICAL COLLEGES ============ -->
+  <section id="colleges" class="py-20 bg-white dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 reveal">
+        <span class="inline-block bg-medical-100 text-medical-700 dark:bg-medical-900/50 dark:text-medical-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Medical Colleges</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Featured Medical Colleges</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Explore top NMC-approved medical colleges across India with complete details.</p>
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-3 mt-8">
+          <select id="filterState" class="inputs-bg border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm font-medium">
+            <option value="">All States</option>
+            <option>Karnataka</option>
+            <option>Maharashtra</option>
+            <option>Tamil Nadu</option>
+            <option>Uttar Pradesh</option>
+            <option>Telangana</option>
+          </select>
+          <select id="filterQuota" class="inputs-bg border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm font-medium">
+            <option value="">All Quotas</option>
+            <option>Government</option>
+            <option>Management</option>
+            <option>NRI</option>
+          </select>
+          <select id="filterFees" class="inputs-bg border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm font-medium">
+            <option value="">All Fees</option>
+            <option>Under ₹5 Lakhs</option>
+            <option>₹5L - ₹15L</option>
+            <option>₹15L - ₹30L</option>
+            <option>Above ₹30L</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="collegeGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- College cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ELIGIBILITY ============ -->
+  <section id="eligibility" class="py-20 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="inline-block bg-navy-100 text-navy-700 dark:bg-navy-900/50 dark:text-navy-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Eligibility</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">MBBS Eligibility Criteria</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Understand the requirements before applying for MBBS admission in India.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg card-hover reveal">
+          <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300 mb-4">
+            <i class="fa-solid fa-stethoscope text-xl"></i>
+          </div>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-3">NEET Qualification</h4>
+          <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Valid NEET UG score</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Minimum qualifying percentile</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Score valid for current admission year</li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg card-hover reveal">
+          <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300 mb-4">
+            <i class="fa-solid fa-book-open text-xl"></i>
+          </div>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-3">Academic Criteria</h4>
+          <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>50% in PCB (General)</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>40% in PCB (Reserved)</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Physics, Chemistry & Biology compulsory</li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg card-hover reveal">
+          <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300 mb-4">
+            <i class="fa-solid fa-user text-xl"></i>
+          </div>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-3">Indian Student Eligibility</h4>
+          <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Indian citizenship</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>17+ years of age</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Valid NEET score</li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg card-hover reveal">
+          <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300 mb-4">
+            <i class="fa-solid fa-globe text-xl"></i>
+          </div>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-3">NRI Student Eligibility</h4>
+          <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>NRI/OCI/PIO status</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Valid passport & visa</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Valid NEET score</li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg card-hover reveal">
+          <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300 mb-4">
+            <i class="fa-solid fa-folder-open text-xl"></i>
+          </div>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-3">Required Documents</h4>
+          <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>NEET Scorecard</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>10th & 12th Marksheets</li>
+            <li><i class="fa-solid fa-check text-medical-500 mr-2"></i>Category & Domicile Certificates</li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-medical-500 to-medical-700 rounded-2xl p-6 shadow-xl text-white reveal flex flex-col justify-center">
+          <i class="fa-solid fa-headset text-3xl mb-4"></i>
+          <h4 class="font-bold text-xl mb-2">Not Sure About Eligibility?</h4>
+          <p class="text-sm text-white/85 mb-4">Our expert counselors will assess your profile and guide you on the best path.</p>
+          <a href="#counseling" class="inline-flex items-center justify-center gap-2 bg-white text-medical-700 font-bold px-5 py-2.5 rounded-xl hover:scale-105 transition-transform">
+            Book Free Counseling <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ADMISSION PROCESS TIMELINE ============ -->
+  <section id="process" class="py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <div class="blob w-80 h-80 bg-navy-100 bottom-0 left-0"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block bg-medical-100 text-medical-700 dark:bg-medical-900/50 dark:text-medical-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Admission Process</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Your Journey to MBBS in 7 Steps</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">A simple, transparent, and guided process from registration to admission confirmation.</p>
+      </div>
+      <div class="relative timeline-line">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal md:mr-10">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-navy-100 dark:bg-navy-900/50 rounded-xl flex items-center justify-center text-navy-600 dark:text-navy-300 font-bold text-lg shrink-0">1</div>
+              <div>
+                <h4 class="font-bold text-navy-900 dark:text-white">Registration</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Register on our portal with your details and create your student profile.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal md:ml-10">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300 font-bold text-lg shrink-0">2</div>
+              <div>
+                <h4 class="font-bold text-navy-900 dark:text-white">Counseling</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Get free counseling from our experts to understand your admission options.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal md:mr-10">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-navy-100 dark:bg-navy-900/50 rounded-xl flex items-center justify-center text-navy-600 dark:text-navy-300 font-bold text-lg shrink-0">3</div>
+              <div>
+                <h4 class="font-bold text-navy-900 dark:text-white">College Selection</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Choose your preferred colleges based on NEET score, budget, and location.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal md:ml-10">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300 font-bold text-lg shrink-0">4</div>
+              <div>
+                <h4 class="font-bold text-navy-900 dark:text-white">Document Verification</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Verify and submit all required documents for your application.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal md:mr-10">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-navy-100 dark:bg-navy-900/50 rounded-xl flex items-center justify-center text-navy-600 dark:text-navy-300 font-bold text-lg shrink-0">5</div>
+              <div>
+                <h4 class="font-bold text-navy-900 dark:text-white">Seat Allotment</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Receive your seat allotment based on merit and choice preferences.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal md:ml-10">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300 font-bold text-lg shrink-0">6</div>
+              <div>
+                <h4 class="font-bold text-navy-900 dark:text-white">Fee Payment</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Complete secure fee payment to confirm your allotted seat.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal md:mr-10 md:col-span-2">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-navy-500 to-medical-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shrink-0">7</div>
+              <div>
+                <h4 class="font-bold text-navy-900 dark:text-white">Admission Confirmation</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Congratulations! Your MBBS admission is confirmed. Welcome to your medical journey.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ONLINE APPLICATION FORM ============ -->
+  <section id="apply" class="py-20 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block bg-medical-100 text-medical-700 dark:bg-medical-900/50 dark:text-medical-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Online Application</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Apply for MBBS Admission</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Fill out the application form and our counselors will contact you within 24 hours.</p>
+      </div>
+
+      <form id="applicationForm" class="bg-white dark:bg-slate-800 rounded-3xl shadow-2xl p-8 space-y-6 reveal">
+        <!-- Basic Info -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Full Name *</label>
+            <input type="text" required placeholder="Enter your full name" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Father's Name *</label>
+            <input type="text" required placeholder="Enter father's name" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Mobile Number *</label>
+            <input type="tel" required placeholder="+91 XXXXX XXXXX" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Email Address *</label>
+            <input type="email" required placeholder="you@example.com" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Date of Birth *</label>
+            <input type="date" required class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Gender *</label>
+            <select required class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm">
+              <option value="">Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Student Category *</label>
+            <select required class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm">
+              <option value="">Select Category</option>
+              <option>Indian</option>
+              <option>NRI</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">State *</label>
+            <input type="text" required placeholder="Your state" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Country *</label>
+            <input type="text" required placeholder="Your country" value="India" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Nationality *</label>
+            <input type="text" required placeholder="Nationality" value="Indian" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+          <h4 class="font-bold text-navy-900 dark:text-white mb-4"><i class="fa-solid fa-vial text-medical-500 mr-2"></i>NEET Details</h4>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">NEET Roll Number *</label>
+              <input type="text" required placeholder="NEET roll no." class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">NEET Score *</label>
+              <input type="number" required placeholder="e.g. 580" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">NEET Rank *</label>
+              <input type="number" required placeholder="e.g. 12500" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">10th Percentage *</label>
+              <input type="number" required placeholder="e.g. 92" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">12th Percentage *</label>
+              <input type="number" required placeholder="e.g. 88" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+          <h4 class="font-bold text-navy-900 dark:text-white mb-4"><i class="fa-solid fa-building-columns text-medical-500 mr-2"></i>College Preferences</h4>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Preferred State *</label>
+              <select required class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm">
+                <option value="">Select State</option>
+                <option>Karnataka</option>
+                <option>Maharashtra</option>
+                <option>Tamil Nadu</option>
+                <option>Uttar Pradesh</option>
+                <option>Telangana</option>
+                <option>Any State</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Preferred Medical College</label>
+              <input type="text" placeholder="College name (optional)" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Admission Category *</label>
+              <select required class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm">
+                <option value="">Select Category</option>
+                <option>Government</option>
+                <option>Management</option>
+                <option>NRI</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Document Uploads -->
+        <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+          <h4 class="font-bold text-navy-900 dark:text-white mb-4"><i class="fa-solid fa-upload text-medical-500 mr-2"></i>Document Upload</h4>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">NEET Scorecard *</label>
+              <div class="file-drop rounded-xl p-4 text-center cursor-pointer">
+                <i class="fa-solid fa-cloud-arrow-up text-2xl text-medical-500 mb-2"></i>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Click to upload or drag & drop</p>
+                <input type="file" accept=".pdf,.jpg,.png" class="hidden" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">10th Marksheet *</label>
+              <div class="file-drop rounded-xl p-4 text-center cursor-pointer">
+                <i class="fa-solid fa-cloud-arrow-up text-2xl text-medical-500 mb-2"></i>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Click to upload or drag & drop</p>
+                <input type="file" accept=".pdf,.jpg,.png" class="hidden" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">12th Marksheet *</label>
+              <div class="file-drop rounded-xl p-4 text-center cursor-pointer">
+                <i class="fa-solid fa-cloud-arrow-up text-2xl text-medical-500 mb-2"></i>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Click to upload or drag & drop</p>
+                <input type="file" accept=".pdf,.jpg,.png" class="hidden" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Passport (For NRI)</label>
+              <div class="file-drop rounded-xl p-4 text-center cursor-pointer">
+                <i class="fa-solid fa-cloud-arrow-up text-2xl text-medical-500 mb-2"></i>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Click to upload or drag & drop</p>
+                <input type="file" accept=".pdf,.jpg,.png" class="hidden" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Visa (For NRI)</label>
+              <div class="file-drop rounded-xl p-4 text-center cursor-pointer">
+                <i class="fa-solid fa-cloud-arrow-up text-2xl text-medical-500 mb-2"></i>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Click to upload or drag & drop</p>
+                <input type="file" accept=".pdf,.jpg,.png" class="hidden" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Sponsor Documents (For NRI)</label>
+              <div class="file-drop rounded-xl p-4 text-center cursor-pointer">
+                <i class="fa-solid fa-cloud-arrow-up text-2xl text-medical-500 mb-2"></i>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Click to upload or drag & drop</p>
+                <input type="file" accept=".pdf,.jpg,.png" class="hidden" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Remarks -->
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-navy-900 dark:text-white">Additional Remarks</label>
+          <textarea rows="3" placeholder="Any additional information you'd like to share..." class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-gradient-to-r from-navy-500 to-medical-500 text-white font-bold py-4 rounded-xl shadow-xl hover:scale-[1.02] transition-transform text-lg">
+          <i class="fa-solid fa-paper-plane mr-2"></i>Submit Application
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ BOOK FREE COUNSELING ============ -->
+  <section id="counseling" class="py-20 bg-gradient-to-r from-navy-600 via-navy-500 to-medical-500 text-white relative overflow-hidden">
+    <div class="blob w-96 h-96 bg-white/20 -top-20 -right-20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <span class="inline-block bg-white/20 backdrop-blur px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Free Counseling Session</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Book Your Free Counseling Session Today</h2>
+          <p class="text-white/85 mb-6 text-lg">Speak with our expert admission counselors and get a personalized roadmap for your MBBS admission. Limited slots available every week.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="tel:+919876543210" class="inline-flex items-center gap-2 bg-white text-navy-700 font-bold px-6 py-3.5 rounded-xl hover:scale-105 transition-transform">
+              <i class="fa-solid fa-phone"></i> +91 98765 43210
+            </a>
+            <a href="https://wa.me/919876543210" target="_blank" class="inline-flex items-center gap-2 bg-green-500 font-bold px-6 py-3.5 rounded-xl hover:scale-105 hover:bg-green-600 transition-all">
+              <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Us
+            </a>
+          </div>
+        </div>
+        <form id="counselingForm" class="bg-white dark:bg-slate-800 rounded-3xl shadow-2xl p-8 space-y-4 reveal">
+          <h3 class="text-xl font-bold text-navy-900 dark:text-white mb-4">Request a Callback</h3>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="text" required placeholder="Your Name" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+            <input type="tel" required placeholder="Phone Number" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+          <select required class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm">
+            <option value="">Select Category</option>
+            <option>Government Quota</option>
+            <option>Management Quota</option>
+            <option>NRI Quota</option>
+          </select>
+          <button type="submit" class="w-full bg-gradient-to-r from-navy-500 to-medical-500 text-white font-bold py-3.5 rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
+            <i class="fa-solid fa-calendar-check mr-2"></i>Book Free Counseling
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="py-20 bg-white dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="inline-block bg-medical-100 text-medical-700 dark:bg-medical-900/50 dark:text-medical-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Platform Features</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Powerful Features for a Seamless Experience</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Everything you need to manage your admission journey in one place.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-gauge high text-3xl text-navy-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Student Dashboard</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Track your application status, documents, and notifications in one place.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-user-shield text-3xl text-navy-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Admin Dashboard</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Powerful admin tools to manage applications, colleges, and counselors.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-lock text-3xl text-navy-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Secure Login</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">JWT-authenticated secure access with OTP verification for maximum safety.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-mobile-screen-button text-3xl text-navy-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">OTP Verification</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Verify your identity securely with one-time password authentication.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-brands fa-whatsapp text-3xl text-green-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">WhatsApp Chat</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Instant support directly through WhatsApp for quick queries.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-comments text-3xl text-navy-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Live Chat Support</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Talk to our support team in real-time with the live chat widget.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-robot text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">AI Admission Assistant</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Get smart college recommendations based on your NEET profile.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-magnifying-glass-location text-3xl text-navy-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">College Search</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Search and filter colleges by state, fees, and quota effortlessly.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-scale-balanced text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">College Comparison</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Compare colleges side-by-side on fees, seats, and infrastructure.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-bell text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Notifications</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Get real-time alerts on counseling dates, seat allotments, and updates.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-folder-open text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Document Upload</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Securely upload and manage all your admission documents online.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-route text-3xl text-medical-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Application Tracking</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Follow your application progress from submission to confirmation.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-moon text-3xl text-navy-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Dark Mode</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Comfortable viewing experience with dark and light theme options.</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 card-hover reveal">
+          <i class="fa-solid fa-sun text-3xl text-amber-500 mb-4"></i>
+          <h4 class="font-bold text-navy-900 dark:text-white mb-2">Light Mode</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Bright and clean interface optimized for daytime use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="py-20 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="inline-block bg-medical-100 text-medical-700 dark:bg-medical-900/50 dark:text-medical-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Success Stories</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">What Our Students Say</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Thousands of students have achieved their dream of studying MBBS with our help.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover reveal">
+          <div class="flex text-amber-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-600 dark:text-slate-400 mb-6">"I secured a seat in a top government medical college through MediAdmission. The counseling was transparent and the process was smooth throughout."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-navy-100 dark:bg-navy-900/50 rounded-full flex items-center justify-center text-navy-600 dark:text-navy-300 font-bold">AR</div>
+            <div>
+              <p class="font-bold text-navy-900 dark:text-white">Aarav Sharma</p>
+              <p class="text-xs text-medical-600 dark:text-medical-400">Government Quota · MBBS</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover reveal">
+          <div class="flex text-amber-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-600 dark:text-slate-400 mb-6">"As an NRI student, I was confused about the process. MediAdmission handled everything from documents to seat confirmation. Highly recommended!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-medical-100 dark:bg-medical-900/50 rounded-full flex items-center justify-center text-medical-600 dark:text-medical-300 font-bold">PS</div>
+            <div>
+              <p class="font-bold text-navy-900 dark:text-white">Priya Singh</p>
+              <p class="text-xs text-medical-600 dark:text-medical-400">NRI Quota · MBBS</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg card-hover reveal">
+          <div class="flex text-amber-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="text-slate-600 dark:text-slate-400 mb-6">"Got admission in a private college under management quota. The team was professional and the fee transparency gave us complete confidence."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/50 rounded-full flex items-center justify-center text-amber-600 dark:text-amber-300 font-bold">RK</div>
+            <div>
+              <p class="font-bold text-navy-900 dark:text-white">Rohan Kumar</p>
+              <p class="text-xs text-medical-600 dark:text-medical-400">Management Quota · MBBS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="py-20 bg-white dark:bg-slate-950">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="inline-block bg-navy-100 text-navy-700 dark:bg-navy-900/50 dark:text-navy-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Find answers to common questions about MBBS admissions in India.</p>
+      </div>
+      <div class="space-y-4">
+        <div class="faq-item bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden reveal">
+          <button class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold text-navy-900 dark:text-white">
+            What is the minimum NEET score required for MBBS admission?
+            <i class="fa-solid fa-plus faq-icon text-medical-500 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 text-sm text-slate-600 dark:text-slate-400">
+            The minimum NEET qualifying percentile varies by category. General category requires 50th percentile, OBC/SC/ST requires 40th, and General-PwBD requires 45th percentile. Cutoffs also vary by college and quota.
+          </div>
+        </div>
+        <div class="faq-item bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden reveal">
+          <button class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold text-navy-900 dark:text-white">
+            Can NRI students apply for MBBS in India?
+            <i class="fa-solid fa-plus faq-icon text-medical-500 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 text-sm text-slate-600 dark:text-slate-400">
+            Yes, NRI students can apply under the NRI quota in many medical colleges. They need a valid NEET score, proof of NRI status, passport, visa, and sponsor documents. NRI quota offers separate reserved seats.
+          </div>
+        </div>
+        <div class="faq-item bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden reveal">
+          <button class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold text-navy-900 dark:text-white">
+            What is the difference between Government and Management Quota?
+            <i class="fa-solid fa-plus faq-icon text-medical-500 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 text-sm text-slate-600 dark:text-slate-400">
+            Government quota seats are allocated through centralized state counseling based on NEET merit and are more affordable. Management quota seats are in private colleges, filled directly by the college, and have higher fees but more flexible admission criteria.
+          </div>
+        </div>
+        <div class="faq-item bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden reveal">
+          <button class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold text-navy-900 dark:text-white">
+            Is NEET mandatory for all MBBS admissions in India?
+            <i class="fa-solid fa-plus faq-icon text-medical-500 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 text-sm text-slate-600 dark:text-slate-400">
+            Yes, NEET UG is mandatory for all MBBS and BDS admissions in India, regardless of quota or category. Without a valid NEET score, admission to MBBS is not possible.
+          </div>
+        </div>
+        <div class="faq-item bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden reveal">
+          <button class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold text-navy-900 dark:text-white">
+            What documents are required for MBBS admission?
+            <i class="fa-solid fa-plus faq-icon text-medical-500 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 text-sm text-slate-600 dark:text-slate-400">
+            Typically required: NEET scorecard, 10th and 12th marksheets, birth certificate, identity proof, and category certificate. For NRI, additional documents like passport, visa, NRI/OCI certificate, and sponsor documents are needed.
+          </div>
+        </div>
+        <div class="faq-item bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden reveal">
+<button class="faq-question w-full flex items-center justify-between p-5 text-left font-semibold text-navy-900 dark:text-white">
+              How much does the counseling service cost?
+            <i class="fa-solid fa-plus faq-icon text-medical-500 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 text-sm text-slate-600 dark:text-slate-400">
+            Our initial counseling is completely free of charge. Only when you decide to proceed with a paid admission assistance package do any service fees apply, and these are fully transparent with no hidden charges.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="py-20 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="inline-block bg-medical-100 text-medical-700 dark:bg-medical-900/50 dark:text-medical-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Contact Us</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white mb-4">Get in Touch</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">We're here to help you with any questions about MBBS admissions.</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Contact Info -->
+        <div class="space-y-5">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg flex items-center gap-4 card-hover reveal">
+            <div class="w-14 h-14 bg-medical-100 dark:bg-medical-900/50 rounded-xl flex items-center justify-center text-medical-600 dark:text-medical-300">
+              <i class="fa-solid fa-phone text-xl"></i>
+            </div>
+            <div>
+              <p class="font-bold text-navy-900 dark:text-white">Phone</p>
+              <a href="tel:+919876543210" class="text-sm text-slate-600 dark:text-slate-400 hover:text-medical-600">+91 98765 43210</a>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg flex items-center gap-4 card-hover reveal">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/50 rounded-xl flex items-center justify-center text-green-600 dark:text-green-300">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+            </div>
+            <div>
+              <p class="font-bold text-navy-900 dark:text-white">WhatsApp</p>
+              <a href="https://wa.me/919876543210" target="_blank" class="text-sm text-slate-600 dark:text-slate-400 hover:text-green-600">+91 98765 43210</a>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg flex items-center gap-4 card-hover reveal">
+            <div class="w-14 h-14 bg-navy-100 dark:bg-navy-900/50 rounded-xl flex items-center justify-center text-navy-600 dark:text-navy-300">
+              <i class="fa-solid fa-envelope text-xl"></i>
+            </div>
+            <div>
+              <p class="font-bold text-navy-900 dark:text-white">Email</p>
+              <a href="mailto:info@mediadmission.in" class="text-sm text-slate-600 dark:text-slate-400 hover:text-navy-600">info@mediadmission.in</a>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg flex items-center gap-4 card-hover reveal">
+            <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/50 rounded-xl flex items-center justify-center text-amber-600 dark:text-amber-300">
+              <i class="fa-solid fa-location-dot text-xl"></i>
+            </div>
+            <div>
+              <p class="font-bold text-navy-900 dark:text-white">Office Address</p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">3rd Floor, Education Tower, MG Road, Bengaluru, Karnataka 560001</p>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="rounded-2xl overflow-hidden shadow-lg reveal">
+            <iframe title="Office Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.646652504435!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" class="w-full h-64 border-0" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <!-- Contact Form -->
+        <form id="contactForm" class="bg-white dark:bg-slate-800 rounded-3xl shadow-2xl p-8 space-y-5 reveal">
+          <h3 class="text-xl font-bold text-navy-900 dark:text-white">Send Us a Message</h3>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <input type="text" required placeholder="Your Name" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+            <input type="email" required placeholder="Your Email" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          </div>
+          <input type="tel" required placeholder="Phone Number" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          <input type="text" placeholder="Subject" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm" />
+          <textarea placeholder="Your Message" rows="4" class="w-full inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm"></textarea>
+          <button type="submit" class="w-full bg-gradient-to-r from-navy-500 to-medical-500 text-white font-bold py-3.5 rounded-xl shadow-xl hover:scale-[1.02] transition-transform">
+            <i class="fa-solid fa-paper-plane mr-2"></i>Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-slate-900 dark:bg-slate-950 text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-navy-500 to-medical-500 rounded-xl flex items-center justify-center">
+              <i class="fa-solid fa-staff-snake text-white text-lg"></i>
+            </div>
+            <div>
+              <p class="font-bold text-white text-lg leading-tight">MediAdmission</p>
+              <p class="text-[10px] tracking-widest text-medical-400 font-semibold uppercase">India</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 mb-4">Your Gateway to MBBS Admissions in India – Government, Management & NRI Quota.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-medical-600 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-medical-600 transition-colors" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-medical-600 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-medical-600 transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-medical-600 transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="font-bold text-white mb-4">Quick Links</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#home" class="hover:text-medical-400 transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-medical-400 transition-colors">About Us</a></li>
+            <li><a href="#colleges" class="hover:text-medical-400 transition-colors">Medical Colleges</a></li>
+            <li><a href="#eligibility" class="hover:text-medical-400 transition-colors">Eligibility</a></li>
+            <li><a href="#process" class="hover:text-medical-400 transition-colors">Admission Process</a></li>
+            <li><a href="#apply" class="hover:text-medical-400 transition-colors">Apply Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-white mb-4">Legal</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-medical-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-medical-400 transition-colors">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:text-medical-400 transition-colors">Refund Policy</a></li>
+            <li><a href="#contact" class="hover:text-medical-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-white mb-4">Contact</h5>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-medical-400"></i> +91 98765 43210</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-medical-400"></i> info@mediadmission.in</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-medical-400"></i> MG Road, Bengaluru, Karnataka</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 mt-12 pt-6 text-center text-sm text-slate-500">
+        &copy; 2024 MediAdmission India. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING BUTTONS ============ -->
+  <!-- WhatsApp -->
+  <a href="https://wa.me/919876543210" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-pulseSoft" title="WhatsApp Us">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+  </a>
+  <!-- Live Chat -->
+  <button id="chatBtn" class="fixed bottom-6 right-24 z-40 w-14 h-14 rounded-full bg-gradient-to-br from-navy-500 to-medical-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" title="Live Chat">
+    <i class="fa-solid fa-comments text-2xl"></i>
+  </button>
+
+  <!-- Live Chat Widget -->
+  <div id="chatWidget" class="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl overflow-hidden hidden">
+    <div class="bg-gradient-to-r from-navy-500 to-medical-500 p-4 text-white flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"><i class="fa-solid fa-headset"></i></div>
+        <div>
+          <p class="font-bold text-sm">MediAdmission Support</p>
+          <p class="text-xs text-white/80 flex items-center gap-1"><span class="w-2 h-2 bg-green-400 rounded-full inline-block"></span> Online</p>
+        </div>
+      </div>
+      <button id="closeChat" class="text-white/80 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+    </div>
+    <div id="chatMessages" class="h-64 overflow-y-auto p-4 space-y-3 bg-slate-50 dark:bg-slate-900">
+      <div class="bg-white dark:bg-slate-800 rounded-xl rounded-tl-none p-3 text-sm max-w-[80%] shadow">👋 Hello! Welcome to MediAdmission India. How can we help you with your MBBS admission today?</div>
+    </div>
+    <div class="p-3 border-t border-slate-200 dark:border-slate-700 flex gap-2">
+      <input type="text" id="chatInput" placeholder="Type your message..." class="flex-1 inputs-bg border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-sm" />
+      <button id="sendMessage" class="w-10 h-10 bg-gradient-to-r from-navy-500 to-medical-500 rounded-xl text-white"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed top-20 right-6 z-50 hidden"></div>
+
+  <!-- ============ COLLEGE DATA ============ -->
+  <script>
+    const colleges = [
+      { name: "AIIMS Delhi", state: "Delhi", university: "AIIMS", nmc: true, fees: 0.06, seats: 120, mgmt: false, nri: false, img: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=600&q=80" },
+      { name: "KMC Manipal", state: "Karnataka", university: "MAHE", nmc: true, fees: 18, seats: 250, mgmt: true, nri: true, img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" },
+      { name: "SMS Medical College", state: "Rajasthan", university: "RUHS", nmc: true, fees: 0.3, seats: 250, mgmt: false, nri: false, img: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80" },
+      { name: "CMC Vellore", state: "Tamil Nadu", university: "CMC", nmc: true, fees: 12, seats: 100, mgmt: true, nri: true, img: "https://images.unsplash.com/photo-1551601651-2a8555f1a0a8?w=600&q=80" },
+      { name: "Kasturba Medical College", state: "Karnataka", university: "MAHE", nmc: true, fees: 20, seats: 200, mgmt: true, nri: true, img: "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?w=600&q=80" },
+      { name: "Gandhi Medical College", state: "Telangana", university: "KNRUHS", nmc: true, fees: 0.25, seats: 200, mgmt: false, nri: false, img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" },
+      { name: "Grant Medical College", state: "Maharashtra", university: "MUHS", nmc: true, fees: 0.4, seats: 200, mgmt: false, nri: false, img: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=600&q=80" },
+      { name: "AMC & KH", state: "Uttar Pradesh", university: "AKTU", nmc: true, fees: 8, seats: 150, mgmt: true, nri: true, img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" },
+      { name: "Osmania Medical College", state: "Telangana", university: "KNRUHS", nmc: true, fees: 0.3, seats: 200, mgmt: false, nri: false, img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" },
+      { name: "JMCRC", state: "Karnataka", university: "RGUHS", nmc: true, fees: 22, seats: 150, mgmt: true, nri: true, img: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&q=80" },
+      { name: "SRM Medical College", state: "Tamil Nadu", university: "SRM", nmc: true, fees: 16, seats: 150, mgmt: true, nri: true, img: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=80" },
+      { name: "IMS BHU", state: "Uttar Pradesh", university: "BHU", nmc: true, fees: 0.5, seats: 150, mgmt: false, nri: false, img: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=600&q=80" }
+    ];
+  </script>
+
+  <!-- ============ MAIN JAVASCRIPT ============ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ===== Dark Mode Toggle =====
+      const themeToggle = document.getElementById('themeToggle');
+      const icon = themeToggle.querySelector('i');
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        icon.className = 'fa-solid fa-sun text-lg';
+      }
+      themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        icon.className = isDark ? 'fa-solid fa-sun text-lg' : 'fa-solid fa-moon text-lg';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+
+      // ===== Mobile Menu =====
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.querySelector('i').className = mobileMenu.classList.contains('hidden')
+          ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
+      });
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars text-xl';
+        });
+      });
+
+      // ===== Navbar scroll effect =====
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('shadow-lg');
+        } else {
+          navbar.classList.remove('shadow-lg');
+        }
+      });
+
+      // ===== Reveal on scroll =====
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // ===== Animated Counters =====
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.count);
+            let current = 0;
+            const step = Math.ceil(target / 60);
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              el.textContent = current.toLocaleString('en-IN');
+            }, 30);
+            countObserver.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
+
+      // ===== Category Tabs =====
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = {
+        'govt': document.getElementById('tab-govt'),
+        'mgmt': document.getElementById('tab-mgmt'),
+        'nri': document.getElementById('tab-nri')
+      };
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-700');
+          });
+          btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-700');
+          btn.classList.add('active');
+          Object.values(tabContents).forEach(c => c.classList.add('hidden'));
+          tabContents[btn.dataset.tab].classList.remove('hidden');
+        });
+      });
+
+      // ===== Render College Cards =====
+      const collegeGrid = document.getElementById('collegeGrid');
+      const filterState = document.getElementById('filterState');
+      const filterQuota = document.getElementById('filterQuota');
+      const filterFees = document.getElementById('filterFees');
+
+      function formatFees(fees) {
+        if (fees < 1) return '₹' + Math.round(fees * 1000) + 'K /yr';
+        return '₹' + fees + 'L /yr';
+      }
+
+      function renderColleges() {
+        const state = filterState.value;
+        const quota = filterQuota.value;
+        const fees = filterFees.value;
+        const filtered = colleges.filter(c => {
+          if (state && c.state !== state) return false;
+          if (quota === 'Government' && !(!c.mgmt && !c.nri)) return false;
+          if (quota === 'Management' && !c.mgmt) return false;
+          if (quota === 'NRI' && !c.nri) return false;
+          if (fees === 'Under ₹5 Lakhs' && !(c.fees < 5)) return false;
+          if (fees === '₹5L - ₹15L' && !(c.fees >= 5 && c.fees <= 15)) return false;
+          if (fees === '₹15L - ₹30L' && !(c.fees > 15 && c.fees <= 30)) return false;
+          if (fees === 'Above ₹30L' && !(c.fees > 30)) return false;
+          return true;
+        });
+
+        if (filtered.length === 0) {
+          collegeGrid.innerHTML = '<p class="col-span-full text-center text-slate-500 dark:text-slate-400 py-16">No colleges match your filters. Try adjusting your search.</p>';
+          return;
+        }
+
+        collegeGrid.innerHTML = filtered.map(c => `
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-lg card-hover reveal visible">
+            <div class="relative h-44 overflow-hidden">
+              <img src="${c.img}" alt="${c.name}" class="w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">✓ NMC Approved</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg text-navy-900 dark:text-white">${c.name}</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-medical-500 mr-1"></i>${c.state} · ${c.university}</p>
+              <div class="grid grid-cols-2 gap-3 mt-4 text-sm">
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-3">
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Annual Fees</p>
+                  <p class="font-bold text-navy-900 dark:text-white">${formatFees(c.fees)}</p>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-3">
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Seats</p>
+                  <p class="font-bold text-navy-900 dark:text-white">${c.seats}</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-4">
+                ${c.mgmt ? '<span class="text-xs bg-medical-100 dark:bg-medical-900/50 text-medical-700 dark:text-medical-300 px-3 py-1 rounded-full font-semibold">Management</span>' : ''}
+                ${c.nri ? '<span class="text-xs bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 px-3 py-1 rounded-full font-semibold">NRI</span>' : ''}
+                ${!c.mgmt && !c.nri ? '<span class="text-xs bg-navy-100 dark:bg-navy-900/50 text-navy-700 dark:text-navy-300 px-3 py-1 rounded-full font-semibold">Government</span>' : ''}
+              </div>
+              <a href="#apply" class="mt-5 w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-navy-500 to-medical-500 text-white font-bold py-2.5 rounded-xl hover:scale-[1.02] transition-transform">
+                Apply Now <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+      renderColleges();
+      filterState.addEventListener('change', renderColleges);
+      filterQuota.addEventListener('change', renderColleges);
+      filterFees.addEventListener('change', renderColleges);
+
+      // ===== FAQ Accordion =====
+      document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+          const item = q.closest('.faq-item');
+          const wasActive = item.classList.contains('active');
+          document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+          if (!wasActive) item.classList.add('active');
+        });
+      });
+
+      // ===== File Upload Drop Areas =====
+      document.querySelectorAll('.file-drop').forEach(drop => {
+        const fileInput = drop.querySelector('input[type="file"]');
+        drop.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', (e) => {
+          if (e.target.files.length > 0) {
+            drop.innerHTML = `<i class="fa-solid fa-file-circle-check text-2xl text-medical-500 mb-2"></i><p class="text-sm text-medical-600 dark:text-medical-400 font-medium">${e.target.files[0].name}</p>`;
+          }
+        });
+        drop.addEventListener('dragover', (e) => { e.preventDefault(); drop.classList.add('dragover'); });
+        drop.addEventListener('dragleave', () => drop.classList.remove('dragover'));
+        drop.addEventListener('drop', (e) => {
+          e.preventDefault();
+          drop.classList.remove('dragover');
+          if (e.dataTransfer.files.length > 0) {
+            drop.innerHTML = `<i class="fa-solid fa-file-circle-check text-2xl text-medical-500 mb-2"></i><p class="text-sm text-medical-600 dark:text-medical-400 font-medium">${e.dataTransfer.files[0].name}</p>`;
+          }
+        });
+      });
+
+      // ===== Toast Notification =====
+      function showToast(message, type = 'success') {
+        const toast = document.getElementById('toast');
+        const colors = type === 'success'
+          ? 'bg-green-600 text-white'
+          : 'bg-red-600 text-white';
+        toast.className = `fixed top-20 right-6 z-50 ${colors} px-6 py-4 rounded-xl shadow-2xl toast`;
+        toast.innerHTML = `<i class="fa-solid ${type === 'success' ? 'fa-circle-check' : 'fa-circle-xmark'} mr-2"></i>${message}`;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 4000);
+      }
+
+      // ===== Form Submissions =====
+      document.getElementById('applicationForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast('Application submitted successfully! Our counselors will contact you within 24 hours.');
+        e.target.reset();
+        document.querySelectorAll('.file-drop').forEach(d => {
+          d.innerHTML = `<i class="fa-solid fa-cloud-arrow-up text-2xl text-medical-500 mb-2"></i><p class="text-sm text-slate-500 dark:text-slate-400">Click to upload or drag & drop</p>`;
+        });
+      });
+
+      document.getElementById('counselingForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast('Counseling session booked! We will call you shortly.');
+        e.target.reset();
+      });
+
+      document.getElementById('contactForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast('Message sent successfully! We will get back to you soon.');
+        e.target.reset();
+      });
+
+      // ===== Live Chat Widget =====
+      const chatWidget = document.getElementById('chatWidget');
+      const chatBtn = document.getElementById('chatBtn');
+      const closeChat = document.getElementById('closeChat');
+      const chatMessages = document.getElementById('chatMessages');
+      const chatInput = document.getElementById('chatInput');
+      const sendMessage = document.getElementById('sendMessage');
+
+      chatBtn.addEventListener('click', () => {
+        chatWidget.classList.toggle('hidden');
+      });
+      closeChat.addEventListener('click', () => {
+        chatWidget.classList.add('hidden');
+      });
+      sendMessage.addEventListener('click', () => {
+        const msg = chatInput.value.trim();
+        if (msg) {
+          const div = document.createElement('div');
+          div.className = 'bg-gradient-to-r from-navy-500 to-medical-500 text-white rounded-xl rounded-tr-none p-3 text-sm max-w-[80%] self-end ml-auto shadow';
+          div.textContent = msg;
+          chatMessages.appendChild(div);
+          chatInput.value = '';
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+          setTimeout(() => {
+            const reply = document.createElement('div');
+            reply.className = 'bg-white dark:bg-slate-800 rounded-xl rounded-tl-none p-3 text-sm max-w-[80%] shadow';
+            reply.textContent = 'Thank you for your message. Our team will get back to you shortly!';
+            chatMessages.appendChild(reply);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+          }, 1200);
+        }
+      });
+      chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage.click();
+      });
+
+      // ===== Smooth scroll offset for fixed navbar =====
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const offset = 80;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
